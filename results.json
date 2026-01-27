@@ -1,0 +1,302 @@
+{
+  "search_criteria": {
+    "location": "Şişli",
+    "neighborhood": "Merkez",
+    "room_count": "2+1",
+    "building_age_min": 5,
+    "floor": 1,
+    "listing_type": "satılık"
+  },
+  "listings": [
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/61827-1967",
+      "İlan Açıklaması": "Şişli Merkezde Yeni Binada Asansörlü 2+1 Boş Satılık Daire",
+      "Daire Fiyatı": "13.000.000TL",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "2+1",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/139911-382",
+      "İlan Açıklaması": "Bomontide 3.Kat İçi Temiz 3+1 90 M2",
+      "Daire Fiyatı": "7.500.000TL",
+      "Mahalle": "Bomonti",
+      "Oda Sayısı": "3+1",
+      "Kat": "3. Kat"
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/43996-27542",
+      "İlan Açıklaması": "Cadde Üzeri Adliye Metro   5 Dk  Mesafede   Daire Ofis Olur",
+      "Daire Fiyatı": "3.850.000TL",
+      "Mahalle": "",
+      "Oda Sayısı": "",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/123075-4850",
+      "İlan Açıklaması": "Şişli Merkez Hanımefendi Sokak 90m2 Bahçe Kullanımlı 2+1 Daire",
+      "Daire Fiyatı": "7.200.000TL",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "2+1",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/4245-10812",
+      "İlan Açıklaması": "Bomonti Sıracevizler Caddesi'nde Geniş Kupon 3+1",
+      "Daire Fiyatı": "16.000.000TL",
+      "Mahalle": "Bomonti",
+      "Oda Sayısı": "3+1",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/40208-2565",
+      "İlan Açıklaması": "Şişli Merkez'de Kocamansur Sokakta 3+1 Yüksek Giriş Boş Satılık Daire",
+      "Daire Fiyatı": "8.500.000TL",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "3+1",
+      "Kat": "Yüksek Giriş"
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/33311-1186",
+      "İlan Açıklaması": "Şişlide Geniş Kullanışlı Çatı Dubleksi Satılık Çift Tapulu Daire",
+      "Daire Fiyatı": "30.000.000TL",
+      "Mahalle": "",
+      "Oda Sayısı": "",
+      "Kat": "Çatı Dubleks"
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/33311-1184",
+      "İlan Açıklaması": "Şişli Holidayinn Otel Arkası Genç Binada Çiftteras Satılık Daire",
+      "Daire Fiyatı": "14.250.000TL",
+      "Mahalle": "",
+      "Oda Sayısı": "",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/41929-1156",
+      "İlan Açıklaması": "Şişli Merkez Hanımefendi Sokak'ta 1.Kat 3+1 Genç Binada Kombili Asansörlü Daire.",
+      "Daire Fiyatı": "18.000.000TL",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "3+1",
+      "Kat": "1. Kat"
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/40208-2554",
+      "İlan Açıklaması": "Şişli Merkezde 2+1 Yüksek Giriş Satılık Boş Daire",
+      "Daire Fiyatı": "7.250.000TL",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "2+1",
+      "Kat": "Yüksek Giriş"
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/151104-64",
+      "İlan Açıklaması": "Sıracevizler Cad.5.Kat 2+1 Asansörlü 90m2",
+      "Daire Fiyatı": "7.850.000TL",
+      "Mahalle": "",
+      "Oda Sayısı": "2+1",
+      "Kat": "5. Kat"
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/61827-1946",
+      "İlan Açıklaması": "Şişli Abidei Hürriyet Caddesinde Asansörlü 3+1 Satılık Boş Daire",
+      "Daire Fiyatı": "10.500.000TL",
+      "Mahalle": "",
+      "Oda Sayısı": "3+1",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/139911-342",
+      "İlan Açıklaması": "Sıracevizler Cad.5.Kat 2+1 Asansörlü 90m2",
+      "Daire Fiyatı": "7.850.000TL",
+      "Mahalle": "",
+      "Oda Sayısı": "2+1",
+      "Kat": "5. Kat"
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/2431-7715",
+      "İlan Açıklaması": "Şişli Merkezde Satılık 1+1 - 65 M2 Yeni Binada Yarı Zemin Daire",
+      "Daire Fiyatı": "6.700.000TL",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "1+1",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/140374-151",
+      "İlan Açıklaması": "Şişli Sıracevizler Cad. Üzerinde Satılık 2+1 Bahçe Katı",
+      "Daire Fiyatı": "4.200.000TL",
+      "Mahalle": "",
+      "Oda Sayısı": "2+1",
+      "Kat": "Bahçe Katı"
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/3022-755",
+      "İlan Açıklaması": "Halaskargazi'ye Cepheli 125 M2 Asansörlü 2+1 Satılık Daire",
+      "Daire Fiyatı": "14.000.000TL",
+      "Mahalle": "Halaskargazi",
+      "Oda Sayısı": "2+1",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/16039-3024",
+      "İlan Açıklaması": "Şişli Perihan Sok.2+1 Bodrum Kat",
+      "Daire Fiyatı": "4.000.000TL",
+      "Mahalle": "",
+      "Oda Sayısı": "2+1",
+      "Kat": "Bodrum Kat"
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/0-45932906",
+      "İlan Açıklaması": "Sahibinden Şişli Hanımefendide 170 M2 Asansörlü Kombili",
+      "Daire Fiyatı": "17.500.000TL",
+      "Mahalle": "",
+      "Oda Sayısı": "",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/70189-4754",
+      "İlan Açıklaması": "Bomonti 338 M2 Yüksek Tavan Ve Özel Tasarımlı Dubleks Loft Daire",
+      "Daire Fiyatı": "36.000.000TL",
+      "Mahalle": "Bomonti",
+      "Oda Sayısı": "",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/40208-2552",
+      "İlan Açıklaması": "Şişli Merkez'de  Kocamansur Sokakta 3+1 Yüksek Giriş Boş Satılık Daire",
+      "Daire Fiyatı": "8.500.000TL",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "3+1",
+      "Kat": "Yüksek Giriş"
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/151431-69",
+      "İlan Açıklaması": "Rotana Bomonti Satılık 1+1",
+      "Daire Fiyatı": "12.950.000TL",
+      "Mahalle": "Bomonti",
+      "Oda Sayısı": "1+1",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/50604-929",
+      "İlan Açıklaması": "Şişli Abide-İ Hürriyet Caddesinde 1.Kat 150 M2 3+1 Asansörlü Satılık Daire",
+      "Daire Fiyatı": "16.000.000TL",
+      "Mahalle": "",
+      "Oda Sayısı": "3+1",
+      "Kat": "1. Kat"
+    },
+    {
+      "İlan Linki": "https://www.hepsiemlak.com/istanbul-sisli-merkez-satilik/daire/61827-1952",
+      "İlan Açıklaması": "Şişli Merkezde Yeni Binada 200m2 Asansörlü 3+2 Çift Teraslı Dubleks Daire",
+      "Daire Fiyatı": "22.000.000TL",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "3+2",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.emlakjet.com/ilan/sisli-siracevizler-cad-uzerinde-satilik-21-bahce-kati-18894487",
+      "İlan Açıklaması": "YENİŞişli Sıracevizler Cad. Üzerinde Satılık 2+1 Bahçe KatıŞişli - Merkez MahallesiDaire | 2+1 | Bahçe katı | 80 m²4.200.000TL",
+      "Daire Fiyatı": "",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "2+1",
+      "Kat": "Bahçe Katı"
+    },
+    {
+      "İlan Linki": "https://www.emlakjet.com/ilan/sisli-abide-i-hurriyette-yeni-binada-otoparkli-daire-18820074",
+      "İlan Açıklaması": "Şişli Abide-i Hürriyette Yeni Binada Otoparklı DaireŞişli - Merkez MahallesiDaire | 2+1 | 5. Kat | 90 m²11.900.000TL",
+      "Daire Fiyatı": "",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "2+1",
+      "Kat": "5. Kat"
+    },
+    {
+      "İlan Linki": "https://www.emlakjet.com/ilan/hanimefendi-sokak-da-sisli-camine-yakin-bahceli-kiracili-kat-mulkiyetli-18796773",
+      "İlan Açıklaması": "Hanımefendi Sokak Da Şişli Camine Yakın Bahçeli Kiracılı Kat MülkiyetliŞişli - Merkez MahallesiDaire | 2+1 | Bahçe katı | 90 m²4.850.000TL",
+      "Daire Fiyatı": "",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "2+1",
+      "Kat": "Bahçe Katı"
+    },
+    {
+      "İlan Linki": "https://www.emlakjet.com/ilan/sisli-merkez-perihan-sokakta-yuksek-giris-31-18658188",
+      "İlan Açıklaması": "Şişli Merkez Perihan Sokakta Yüksek Giriş 3+1Şişli - Merkez MahallesiDaire | 3+1 | Yüksek giriş | 140 m²8.500.000TL",
+      "Daire Fiyatı": "",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "3+1",
+      "Kat": "Yüksek Giriş"
+    },
+    {
+      "İlan Linki": "https://www.emlakjet.com/ilan/remax-sirvan-dan-sisli-de-ana-cadde-uzerinde-satilik-31-daire-18609707",
+      "İlan Açıklaması": "Remax Şirvan'dan Şişli'de Ana Cadde Üzerinde Satılık 3+1 DaireŞişli - Merkez MahallesiDaire | 3+1 | 4. Kat | 170 m²13.000.000TL",
+      "Daire Fiyatı": "",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "3+1",
+      "Kat": "4. Kat"
+    },
+    {
+      "İlan Linki": "https://www.emlakjet.com/ilan/sisle-merkezde-satilik-dubleks-18453828",
+      "İlan Açıklaması": "Sisle Merkezde Satilik DubleksŞişli - Merkez MahallesiDaire | 4+2 | Çatı Dubleks | 156 m²12.500.000TL",
+      "Daire Fiyatı": "",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "4+2",
+      "Kat": "Çatı Dubleks"
+    },
+    {
+      "İlan Linki": "https://www.emlakjet.com/ilan/sisli-merkezde-satilik-giris-kat-daire-18367480",
+      "İlan Açıklaması": "Sisli Merkezde Satilik Giris Kat DaireŞişli - Merkez MahallesiDaire | 5+1 | Düz Giriş (Zemin) | 220 m²15.000.000TL",
+      "Daire Fiyatı": "",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "5+1",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.emlakjet.com/ilan/sisli-bomonti-elysium-art-residence-da-satilik-11-18154017",
+      "İlan Açıklaması": "Şişli Bomonti Elysium Art Residence Da Satılık 1+1Şişli - Merkez MahallesiDaire | 1+1 | 25. Kat | 72 m²12.500.000TL",
+      "Daire Fiyatı": "",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "1+1",
+      "Kat": "25. Kat"
+    },
+    {
+      "İlan Linki": "https://www.emlakjet.com/ilan/sisli-merkezde-cift-terasli-11-daire-18072987",
+      "İlan Açıklaması": "Şişli Merkezde Çift Teraslı 1+1 DaireŞişli - Merkez MahallesiDaire | 1+1 | 5. Kat | 90 m²14.750.000TL",
+      "Daire Fiyatı": "",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "1+1",
+      "Kat": "5. Kat"
+    },
+    {
+      "İlan Linki": "https://www.emlakjet.com/ilan/sisli-merkezde-satilik-daire-17869269",
+      "İlan Açıklaması": "Sişlı Merkezde Satılık DaıreŞişli - Merkez MahallesiDaire | 2+1 | Düz Giriş (Zemin) | 90 m²6.750.000TL",
+      "Daire Fiyatı": "",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "2+1",
+      "Kat": ""
+    },
+    {
+      "İlan Linki": "https://www.emlakjet.com/ilan/lunas-dan-sisli-halaskargazi-caddesi-uzerinde-100-m2-net-daire-17484434",
+      "İlan Açıklaması": "Lunas'dan Şişli Halaskargazi Caddesi Üzerinde 100 M2 Net DaireŞişli - Merkez MahallesiDaire | 2+1 | 2. Kat | 130 m²8.850.000TL",
+      "Daire Fiyatı": "",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "2+1",
+      "Kat": "2. Kat"
+    },
+    {
+      "İlan Linki": "https://www.emlakjet.com/ilan/sisli-merkez-de-33-m2-bahceye-sahip-satilik-21-daire-17202411",
+      "İlan Açıklaması": "Şişli Merkez'de 33 M2 Bahçeye Sahip Satılık 2+1 DaireŞişli - Merkez MahallesiDaire | 2+1 | Kot 1 (-1). Kat | 55 m²4.850.000TL",
+      "Daire Fiyatı": "",
+      "Mahalle": "Merkez",
+      "Oda Sayısı": "2+1",
+      "Kat": "Alt Kat"
+    },
+    {
+      "İlan Linki": "https://www.remax.com.tr/tr/portfoy/P53181226",
+      "İlan Açıklaması": "150m²4+24. KatKURTULUŞ ŞIŞLI BOZKURT MAH. 4+2 DUBLEKS DAIRE 2 DAIRE TEK TAPU13.900.000₺SatılıkDaireŞişli / Bozkurt Mah.",
+      "Daire Fiyatı": "13.900.000₺",
+      "Mahalle": "",
+      "Oda Sayısı": "4+2",
+      "Kat": "24. Kat"
+    }
+  ],
+  "total_count": 36,
+  "scraped_at": "2026-01-27T12:31:56.314453"
+}
