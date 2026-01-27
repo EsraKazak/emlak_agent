@@ -45,14 +45,32 @@ def parse_listing_page(html: str, url: str) -> Dict:
 def extract_hepsiemlak(soup: BeautifulSoup, listing: Dict) -> Dict:
     """Extract data from Hepsiemlak listing page"""
     
-    title = soup.select_one("h1, .detail-title, [class*='title']")
-    if title:
-        listing["ilan_aciklamasi"] = title.get_text(strip=True)[:200]
+    # Try to get full description first
+    description_selectors = [
+        ".description", ".detail-description", "[class*='description']",
+        ".property-description", "#description", ".ilan-aciklama",
+        "[class*='aciklama']", ".detail-text", ".listing-description"
+    ]
     
+    for selector in description_selectors:
+        desc_elem = soup.select_one(selector)
+        if desc_elem:
+            desc_text = desc_elem.get_text(strip=True)
+            if desc_text and len(desc_text) > 50:  # Make sure it's substantial
+                listing["ilan_aciklamasi"] = desc_text
+                break
+    
+    # Fallback to title if no description found
+    if not listing["ilan_aciklamasi"]:
+        title = soup.select_one("h1, .detail-title, [class*='title']")
+        if title:
+            listing["ilan_aciklamasi"] = title.get_text(strip=True)
+    
+    # Last resort: meta description
     if not listing["ilan_aciklamasi"]:
         meta = soup.find("meta", {"name": "description"})
         if meta:
-            listing["ilan_aciklamasi"] = meta.get("content", "")[:200]
+            listing["ilan_aciklamasi"] = meta.get("content", "")
     
     price_selectors = [
         ".price", ".listing-price", "[class*='price']", 
@@ -72,22 +90,31 @@ def extract_hepsiemlak(soup: BeautifulSoup, listing: Dict) -> Dict:
 def extract_sahibinden(soup: BeautifulSoup, listing: Dict) -> Dict:
     """Extract data from Sahibinden listing page"""
     
-    # Title
-    title = soup.select_one("h1, .classifiedDetailTitle, [class*='title']")
-    if title:
-        listing["ilan_aciklamasi"] = title.get_text(strip=True)[:200]
+    # Try to get full description first (prioritize detailed description)
+    description_selectors = [
+        "#classifiedDescription", ".classifiedDescription",
+        ".description", "[class*='description']", ".detail-text"
+    ]
     
-    # Description
-    if not listing["ilan_aciklamasi"]:
-        desc_elem = soup.select_one("#classifiedDescription, .classifiedDescription")
+    for selector in description_selectors:
+        desc_elem = soup.select_one(selector)
         if desc_elem:
-            listing["ilan_aciklamasi"] = desc_elem.get_text(strip=True)[:200]
+            desc_text = desc_elem.get_text(strip=True)
+            if desc_text and len(desc_text) > 50:
+                listing["ilan_aciklamasi"] = desc_text
+                break
     
-    # Meta description
+    # Fallback to title
+    if not listing["ilan_aciklamasi"]:
+        title = soup.select_one("h1, .classifiedDetailTitle, [class*='title']")
+        if title:
+            listing["ilan_aciklamasi"] = title.get_text(strip=True)
+    
+    # Last resort: meta description
     if not listing["ilan_aciklamasi"]:
         meta = soup.find("meta", {"name": "description"})
         if meta:
-            listing["ilan_aciklamasi"] = meta.get("content", "")[:200]
+            listing["ilan_aciklamasi"] = meta.get("content", "")
     
     # Price
     price_selectors = [".classifiedInfo h3", ".price", "[class*='price']", "[class*='fiyat']"]
@@ -105,11 +132,57 @@ def extract_sahibinden(soup: BeautifulSoup, listing: Dict) -> Dict:
 def extract_emlakjet(soup: BeautifulSoup, listing: Dict) -> Dict:
     """Extract data from Emlakjet listing page"""
     
-    title = soup.select_one("h1, .property-title, [class*='title']")
-    if title:
-        listing["ilan_aciklamasi"] = title.get_text(strip=True)[:200]
+    # Try to get full description first - Emlakjet specific selectors
+    description_selectors = [
+        # Look for "İlan Açıklaması" section
+        "div[class*='description']", "div[class*='Description']",
+        "div[class*='aciklama']", "div[class*='Aciklama']",
+        ".property-description", ".detail-description",
+        "#description", ".ilan-aciklama",
+        "section[class*='description']", "section[class*='aciklama']",
+        # Look for content areas
+        "div[class*='content']", "div[class*='Content']",
+        ".detail-text", ".listing-description"
+    ]
     
-    price_selectors = [".price", "[class*='price']", "[class*='fiyat']"]
+    for selector in description_selectors:
+        desc_elem = soup.select_one(selector)
+        if desc_elem:
+            desc_text = desc_elem.get_text(strip=True)
+            # Filter out if it's just property features (contains too many bullet points or numbers)
+            if desc_text and len(desc_text) > 100 and desc_text.count('\n') < 30:
+                listing["ilan_aciklamasi"] = desc_text
+                break
+    
+    # Try to find "İlan Açıklaması" heading and get text after it
+    if not listing["ilan_aciklamasi"]:
+        # Look for headings containing "açıklama" or "description"
+        headings = soup.find_all(['h2', 'h3', 'h4', 'div'], string=re.compile(r'(İlan Açıklama|Açıklama|Description)', re.IGNORECASE))
+        for heading in headings:
+            # Get the next sibling or parent's next content
+            next_elem = heading.find_next_sibling()
+            if next_elem:
+                desc_text = next_elem.get_text(strip=True)
+                if desc_text and len(desc_text) > 50:
+                    listing["ilan_aciklamasi"] = desc_text
+                    break
+    
+    # Try to extract from paragraphs in main content
+    if not listing["ilan_aciklamasi"]:
+        paragraphs = soup.find_all('p')
+        for p in paragraphs:
+            text = p.get_text(strip=True)
+            if text and len(text) > 100:
+                listing["ilan_aciklamasi"] = text
+                break
+    
+    # Fallback to title
+    if not listing["ilan_aciklamasi"]:
+        title = soup.select_one("h1, .property-title, [class*='title']")
+        if title:
+            listing["ilan_aciklamasi"] = title.get_text(strip=True)
+    
+    price_selectors = [".price", "[class*='price']", "[class*='fiyat']", "[class*='Price']"]
     for selector in price_selectors:
         price_elem = soup.select_one(selector)
         if price_elem:
@@ -124,16 +197,32 @@ def extract_emlakjet(soup: BeautifulSoup, listing: Dict) -> Dict:
 def extract_remax(soup: BeautifulSoup, listing: Dict) -> Dict:
     """Extract data from Remax listing page"""
     
-    # Title
-    title = soup.select_one("h1, .property-title, [class*='title'], .listing-title")
-    if title:
-        listing["ilan_aciklamasi"] = title.get_text(strip=True)[:200]
+    # Try to get full description first
+    description_selectors = [
+        ".description", ".property-description", "[class*='description']",
+        ".detail-description", "#description", ".listing-description",
+        "[class*='aciklama']", ".detail-text", ".property-details"
+    ]
     
-    # Meta description
+    for selector in description_selectors:
+        desc_elem = soup.select_one(selector)
+        if desc_elem:
+            desc_text = desc_elem.get_text(strip=True)
+            if desc_text and len(desc_text) > 50:
+                listing["ilan_aciklamasi"] = desc_text
+                break
+    
+    # Fallback to title
+    if not listing["ilan_aciklamasi"]:
+        title = soup.select_one("h1, .property-title, [class*='title'], .listing-title")
+        if title:
+            listing["ilan_aciklamasi"] = title.get_text(strip=True)
+    
+    # Last resort: meta description
     if not listing["ilan_aciklamasi"]:
         meta = soup.find("meta", {"name": "description"})
         if meta:
-            listing["ilan_aciklamasi"] = meta.get("content", "")[:200]
+            listing["ilan_aciklamasi"] = meta.get("content", "")
     
     # Price
     price_selectors = [".price", "[class*='price']", "[class*='fiyat']", ".listing-price"]

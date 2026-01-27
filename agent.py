@@ -179,22 +179,39 @@ class RealEstateAgent:
                     
                     print(f"   [{site_name}] {len(cards_to_use)} ilan bulundu")
                     
-                    for card in cards_to_use:
-                        all_listings.append({
-                            "İlan Linki": card.get("ilan_linki", url),
-                            "İlan Açıklaması": card.get("ilan_aciklamasi", "")[:200],
-                            "Daire Fiyatı": card.get("daire_fiyati", ""),
-                            "Mahalle": card.get("mahalle", ""),
-                            "Oda Sayısı": card.get("oda_sayisi", ""),
-                            "Kat": card.get("kat", "")
-                        })
+                    # Collect listing URLs to visit
+                    listing_urls = [card.get("ilan_linki") for card in cards_to_use if card.get("ilan_linki")]
+                    
+                    # Visit each listing detail page to get full description
+                    if listing_urls:
+                        print(f"   [{site_name}] {len(listing_urls)} ilan detay sayfası ziyaret ediliyor...")
+                        detail_pages = browse_urls(listing_urls[:20])  # Limit to 20 per site to avoid timeout
+                        
+                        for detail_page in detail_pages:
+                            detail_url = detail_page.get("url", "")
+                            detail_html = detail_page.get("html", "")
+                            
+                            # Parse the detail page for full description
+                            listing = parse_listing_page(detail_html, detail_url)
+                            
+                            # Find matching card for additional metadata
+                            matching_card = next((c for c in cards_to_use if c.get("ilan_linki") == detail_url), {})
+                            
+                            if listing.get("ilan_aciklamasi") or listing.get("daire_fiyati"):
+                                all_listings.append({
+                                    "İlan Linki": detail_url,
+                                    "İlan Açıklaması": listing.get("ilan_aciklamasi", ""),
+                                    "Daire Fiyatı": listing.get("daire_fiyati", matching_card.get("daire_fiyati", "")),
+                                    "Mahalle": matching_card.get("mahalle", ""),
+                                    "Oda Sayısı": matching_card.get("oda_sayisi", ""),
+                                    "Kat": matching_card.get("kat", "")
+                                })
                 else:
-                    # Single listing page
                     listing = parse_listing_page(html, url)
                     if listing.get("ilan_aciklamasi") or listing.get("daire_fiyati"):
                         all_listings.append({
                             "İlan Linki": listing["ilan_linki"],
-                            "İlan Açıklaması": listing["ilan_aciklamasi"][:200],
+                            "İlan Açıklaması": listing["ilan_aciklamasi"],
                             "Daire Fiyatı": listing["daire_fiyati"],
                             "Mahalle": listing.get("mahalle", ""),
                             "Oda Sayısı": listing.get("oda_sayisi", ""),
